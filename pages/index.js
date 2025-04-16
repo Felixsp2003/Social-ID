@@ -6,21 +6,21 @@ export default function Home() {
 
   const handleSubmit = () => {
     if (!socialId.trim()) {
-      setResult('Bitte gib eine gültige Social Club ID ein.');
+      setResult('❗ Bitte gib eine gültige Social Club ID ein.');
       return;
     }
 
-    // Simulierte Abfrage – später durch echte API ersetzen
-    if (socialId.toLowerCase() === 'test123') {
-      setResult('✅ Benutzer gefunden: Max Mustermann');
+    // Beispielprüfung – hier kannst du später echte API-Logik einbauen
+    if (socialId.toLowerCase() === 'felixsp2003403') {
+      setResult('✅ Benutzer gefunden: FelixSP');
     } else {
       setResult('❌ Kein Benutzer mit dieser ID gefunden.');
     }
   };
 
   return (
-    <div style={{ textAlign: 'center', paddingTop: '100px' }}>
-      <h1>Social Club ID Eingabe</h1>
+    <div style={{ textAlign: 'center', paddingTop: '100px', color: 'white', backgroundColor: '#111', minHeight: '100vh' }}>
+      <h1 style={{ fontWeight: 'bold' }}>Social Club ID Eingabe</h1>
       <input
         type="text"
         placeholder="Deine Social Club ID"
@@ -29,7 +29,10 @@ export default function Home() {
         style={{ padding: '10px', width: '300px' }}
       />
       <br /><br />
-      <button onClick={handleSubmit} style={{ padding: '10px 20px' }}>
+      <button
+        onClick={handleSubmit}
+        style={{ padding: '10px 20px', cursor: 'pointer' }}
+      >
         Absenden
       </button>
       <br /><br />
