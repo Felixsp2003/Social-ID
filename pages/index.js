@@ -11,7 +11,7 @@ export default function Home() {
     }
 
     // Beispielprüfung – hier kannst du später echte API-Logik einbauen
-    if (socialId.toLowerCase() === 'felixsp2003403') {
+if (socialId.trim().toLowerCase() === 'felixsp2003403') {
       setResult('✅ Benutzer gefunden: FelixSP');
     } else {
       setResult('❌ Kein Benutzer mit dieser ID gefunden.');
